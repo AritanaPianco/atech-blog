@@ -1,0 +1,16 @@
+.btn-logout{
+    font-weight: bold;
+    padding: .5em 1em;
+    transition: all .3s;
+    margin-left: 1em;
+    background-color: var(--azul-escuro);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-logout:hover{
+    background-color: var(--azul-fraco);
+    color: var(--azul-escuro);
+}
+

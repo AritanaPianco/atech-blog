@@ -1,0 +1,93 @@
+.main-login-cadastro{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--azul-escuro);
+}
+.main-login-cadastro h1{
+    color:var(--azul-fraco);
+    margin-bottom: 1em;
+}
+
+.container-cadastro-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-cadastro-login form{
+    background-color: var(--rosa);
+    padding: 3em;
+    border-radius: 2em; 
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    justify-content: center;
+    box-shadow: 0 0 8px var(--azul-fraco);
+    border: 3px solid var(--azul-escuro);
+
+     
+}
+
+.btn{
+    margin-top: 2em;
+    font-weight: bold;
+    padding: .8em 1em;
+    transition: all .3s;
+    margin-left: 1em;
+    background-color: var(--azul-escuro);
+    color: var(--rosa);
+}
+
+
+
+.btn:hover{
+    background-color: var(--azul-fraco);
+    color: #fff;
+}
+
+.btn-link{
+    text-decoration: none;
+}
+
+
+.form-floating input{
+   margin-top: 2em;
+   border: 2px solid var(--azul-escuro);
+
+}
+
+@media screen and (max-width: 26.25em){
+    .container-cadastro-login{
+       padding: 0 2em;
+    }
+    .container-cadastro-login form{
+        padding: 1em;
+        border-radius: 1em; 
+        border: 2px solid var(--azul-escuro);
+         
+    }
+    .form-floating input{
+        margin-top: 1em;
+        border: 1px solid var(--azul-escuro);
+    
+     }
+
+     
+    .btn{
+        margin-top: 1.5em;
+        padding: .1em 1em;
+        margin-left: 0;
+        font-size: 15px;
+    
+     }
+ 
+    .main-login-cadastro h1{
+       font-size: 25px;
+    }
+
+
+}

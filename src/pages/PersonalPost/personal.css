@@ -1,0 +1,51 @@
+.container-personal{
+    margin-top: 5em;
+}
+
+.btn-delete{
+    border: none;
+    background-color: var(--azul-fraco);
+    font-size: 1.6em;
+    font-weight: bold;
+    border: 2px solid var(--azul-escuro);
+    padding: .5em 0;
+    transition: all .3s;
+}
+
+.btn-delete:hover{
+    background-color: rgb(253, 105, 105);
+    color: #ffff;
+}
+@media screen and (max-width: 26.25em){
+    .btn-delete{
+        font-size: .6em;
+        padding: .1em 0;
+        border: .3px solid var(--azul-escuro);
+        
+    }
+
+    .header-personal{
+       font-size: 5px;
+        height: 20em;
+    }
+
+    .header-personal h1{
+          position: absolute;
+          top: 3px;
+    }
+
+    .personal-nav{
+        top: 40px;
+        
+    }
+    .personal-nav a{
+        margin-left: 6px;
+    }
+
+
+    .btn-logout{
+          font-size: 10px;
+    }
+
+  
+}

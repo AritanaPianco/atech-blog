@@ -1,0 +1,29 @@
+.main-pub{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container-pub h1{
+    color: var(--rosa);
+    font-weight: bolder;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.btn-post{
+    text-decoration: none;
+    background-color: var(--azul-colorido);
+    color: var(--azul-escuro);
+    font-weight: bolder;
+    padding: .7em 1em;
+    border-radius: 5px;
+    transition: all .3s;
+    margin-left: 2em;
+    
+}
+
+.btn-post:hover{
+    background-color: var(--rosa);
+
+}

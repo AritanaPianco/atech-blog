@@ -1,0 +1,159 @@
+
+.component-home{
+    background-color: var(--azul-meio);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    
+}
+
+.component-home h1{
+    color: var(--azul-escuro);
+    padding: .3em 0;
+    font-size: 2.5em;
+    letter-spacing: .1em;
+}
+
+.component-home .nav{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+
+  
+}
+
+.component-home .nav li{
+     list-style-type: none;
+    
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #ffff;
+    padding: .8em 1.5em;
+    transition: all .3s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.nav li a:not(.cads):hover{
+     background-color: var(--azul-fraco);
+     color: var(--azul-forte);
+}
+    
+.cads{
+       background-color: var(--azul-escuro);
+        border-radius: 10px;
+
+}
+
+.cads:hover{
+    background-color: var(--azul-fraco);
+    color: var(--azul-forte);
+}
+.menu-btn,.menu-icon{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 26.25em){
+    .header{
+         height: 7em;
+         align-items: normal;
+         
+    }  
+
+    .header h1{
+        font-size: 1.8em;
+        letter-spacing: .1em;
+        color: #fff;
+        text-shadow: 1px 1px 2px var(--azul-escuro);
+    }
+    .menu-icon{
+      display: block;
+    }
+   
+
+     #nav-menu{
+        display: none;
+        transition: display .3s;
+        margin-top: 10px;
+        
+        
+    }
+    
+    .menu-btn:checked + .menu-icon + #nav-menu{
+        display: flex;
+   
+     }
+
+    .cads{
+      background-color: initial;
+
+    }
+    .nav li a{
+        padding: .8em 0;
+        border-radius: 0;
+        font-size: 15px;
+      
+    }
+
+    nav{
+        position: absolute;
+        
+    }
+}
+
+.header nav{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   top: 3em;
+}
+
+.menu-icon{
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-icon{
+    background-color: var(--azul-escuro);
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+}
+
+.nav-icon::after, .nav-icon::before{
+    content: "";
+    background-color: var(--azul-escuro);
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+    position: absolute;
+    transition: transform .2s;
+}
+
+.nav-icon::after{
+    transform: translateY(8px);
+}
+
+.nav-icon::before{
+    transform: translateY(-8px);
+
+
+}
+.menu-btn:checked + .menu-icon .nav-icon{
+     background-color: transparent;
+}
+
+.menu-btn:checked + .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+}
+.menu-btn:checked + .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+}
