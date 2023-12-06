@@ -2,15 +2,13 @@ import { Link } from "react-router-dom"
 import "./header.css"
 
 
-
 export default function Header(){
     return(
           <div>
               <header className="component-home header">
                     <h1>Atech-Blog</h1>  
                      
-
-                    <nav>
+                    <nav className="wrapper-nav">
 
                         <input type="checkbox" className="menu-btn" id="menu-btn" />
                         <label htmlFor="menu-btn" className="menu-icon">
@@ -24,14 +22,10 @@ export default function Header(){
 
                       </ul>
                     </nav>
-                        
-                        
-                    
-              </header>
 
+             </header>
           </div>
 
     )
-
 
 }

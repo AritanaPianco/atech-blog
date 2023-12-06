@@ -7,19 +7,16 @@ import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 
 import "./home.css"
-import { format } from "date-fns"
-
 
 export default function Home(){
-     const [posts,setPosts] = useState([])
+    const [posts,setPosts] = useState([])
     
     
     useEffect(() => {
         async function loadAllPosts(){
             let postsRef = collection(db,"posts")    
             let searchBycondition =  query(postsRef,orderBy("dataPublic", "desc")) 
-            
-            
+                      
             const unsub = onSnapshot(searchBycondition, (colection) => {
                    let allPosts = []  
                 
@@ -37,14 +34,9 @@ export default function Home(){
                  })
             
                  setPosts(allPosts)    
-
-
             })
         } 
-        
-        
-        
-    
+           
         loadAllPosts()
     
     },[])
@@ -53,7 +45,7 @@ export default function Home(){
     return(
  <div className="main">
         
-            <Header/>  
+    <Header/>  
   
   <Carousel data-bs-theme="dark" className="carrosel">
       <Carousel.Item className="carrosel-item" interval={3000}>
@@ -101,27 +93,28 @@ export default function Home(){
      <h2 className="title-public">Publications</h2>
           
 
-   <div className="container container-cards">
+ 
+ <div className="wrapper-container-cards">
+   <div className="container-cards">
      {posts.map((post) => (
-        <Card className="card" key={post.id}>
+        <div className="card" key={post.id}>
 
-        <Card.Header className="card-header">By {post.autor}</Card.Header>
-        <Card.Body className="card-body">
-          <Card.Title className="card-title">{post.titulo}</Card.Title>
-          <Card.Text className="card-text">
+        <div className="card-header">By {post.autor}</div>
+        <div className="card-body">
+          <div className="card-title">{post.titulo}</div>
+          <div className="card-text">
                {post.conteudo}
-          </Card.Text>
-        </Card.Body>
-          <Card.Subtitle className="card-footer">Public at:  {post.dataPublic}</Card.Subtitle>
-      </Card>
+          </div>
+        </div>
+          <div className="card-footer">Public at:  {post.dataPublic}</div>
+      </div>
              
 
      ))}  
     </div>
-  
+    </div>
 
-       <Footer/> 
-          
+      <Footer/>           
     </div>
 
       

@@ -1,26 +1,28 @@
 
 .component-home{
-    background-color: var(--azul-meio);
+    /* background-color: var(--azul-meio); */
+    background-image: linear-gradient(to top ,hsl(240, 99%, 71%),hsl(240, 82%, 80%));
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+      
+}
 
-    
+.header{
+    padding: 10px 0;
 }
 
 .component-home h1{
     color: var(--azul-escuro);
-    padding: .3em 0;
-    font-size: 2.5em;
-    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .component-home .nav{
     display: flex;
     align-items: center;
     column-gap: 1em;
-
   
 }
 
@@ -29,30 +31,23 @@
     
 }
 
+
 .nav li a{
     text-decoration: none;
-    color: #ffff;
-    padding: .8em 1.5em;
-    transition: all .3s;
-    border-radius: 10px;
+    color: var(--azul-escuro);
+    padding: .5em 1.2em;
+    transition: all .2s;
+    border-radius: 5px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
-.nav li a:not(.cads):hover{
-     background-color: var(--azul-fraco);
-     color: var(--azul-forte);
+.nav li a:hover{
+     background-color: var(--azul-escuro);
+     color: white;
 }
     
-.cads{
-       background-color: var(--azul-escuro);
-        border-radius: 10px;
 
-}
-
-.cads:hover{
-    background-color: var(--azul-fraco);
-    color: var(--azul-forte);
-}
 .menu-btn,.menu-icon{
     display: none;
 }
@@ -71,6 +66,7 @@
         letter-spacing: .1em;
         color: #fff;
         text-shadow: 1px 1px 2px var(--azul-escuro);
+        transform: translateY(-10px);
     }
     .menu-icon{
       display: block;
@@ -79,10 +75,7 @@
 
      #nav-menu{
         display: none;
-        transition: display .3s;
-        margin-top: 10px;
-        
-        
+        transition: display .3s;     
     }
     
     .menu-btn:checked + .menu-icon + #nav-menu{
@@ -105,14 +98,15 @@
         position: absolute;
         
     }
+    .header nav{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transform: translateY(35px);
+    
+    }
 }
 
-.header nav{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   top: 3em;
-}
 
 .menu-icon{
     position: relative;
@@ -136,6 +130,7 @@
     width: 24px;
     position: absolute;
     transition: transform .2s;
+    
 }
 
 .nav-icon::after{

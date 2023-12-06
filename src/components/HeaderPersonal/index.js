@@ -35,11 +35,6 @@ export default function HeaderPersonal(){
 
           </div>
 
-
-    
-                   
-
-
     )
 
 
